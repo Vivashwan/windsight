@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # snapshot (default): bundled January 2026 data. live: fetch from Elexon on startup.
+      DATA_SOURCE: ${DATA_SOURCE:-snapshot}
